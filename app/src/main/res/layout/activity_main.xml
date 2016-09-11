@@ -136,12 +136,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Hasil"
-        android:id="@+id/textViewHasil1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         tools:text="New Text"
         android:id="@+id/textViewHasil2" />
 
@@ -150,12 +144,6 @@
         android:layout_height="wrap_content"
         tools:text="New Text"
         android:id="@+id/textViewHasil3" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="New Text"
-        android:id="@+id/textViewHasil4" />
 
 </LinearLayout>
 
