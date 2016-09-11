@@ -87,9 +87,52 @@ public class MainActivity extends AppCompatActivity {
         if(cb4.isChecked()) check += cb4.getText() + " ";
 
         if(check.length() == startlen) hasil += "Tidak ada pilihan";
-        tvHasil3.setText("dengan Jasa pengantar : " +hasil+"."+ check + "." + spDomisili.getSelectedItem().toString()+".");
+        tvHasil3.setText("dengan Jasa pengantar  " +hasil+"."+ check + "." + spDomisili.getSelectedItem().toString()+".");
     }
 
-    private void doProcess() {
+    private void doProcess()
+    {
+            if(isValid())
+    {
+        String Nama = etNama.getText().toString();
+        int Telepon = Integer.parseInt(etTelp.getText().toString());
+        tvHasil2.setText(Nama+" Telah Order melalui via online oleh "+ Telepon);
+
     }
+}
+
+   private boolean isValid()
+   {
+       boolean valid = true;
+
+       String Nama = etNama.getText().toString();
+       String Telepon = etTelp.getText().toString();
+
+       if(Nama.isEmpty())
+       {
+           etNama.setError("Nama Belum Diisi");
+           valid = false;
+       }
+       else if(etNama.length()<3)
+       {
+           etNama.setError("Nama Minimal 3 Karakter");
+           valid = false;
+       }
+
+       else
+       {
+           etNama.setError(null);
+       }
+       if (Telepon.isEmpty())
+       {
+           etTelp.setError("Telepon Belum Diisi");
+           valid = false ;
+       }
+
+       else
+       {
+           etTelp.setError(null);
+       }
+       return valid;
+   }
 }
