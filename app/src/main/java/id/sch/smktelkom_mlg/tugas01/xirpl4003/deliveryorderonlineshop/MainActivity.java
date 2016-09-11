@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox cb1, cb2, cb3, cb4;
     RadioGroup rgJS;
     Button bOrder;
+    TextView tvHasil1 , tvHasil2 , tvHasil3 , tvHasil4;
 
 
     @Override
@@ -36,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         cb3 = (CheckBox) findViewById(R.id.checkBox3);
         cb4 = (CheckBox) findViewById(R.id.checkBox4);
         bOrder = (Button) findViewById(R.id.buttonOrder);
+        tvHasil1 = (TextView) findViewById(R.id.textViewHasil1);
+        tvHasil2 = (TextView) findViewById(R.id.textViewHasil2);
+        tvHasil3= (TextView) findViewById(R.id.textViewHasil3);
+        tvHasil4=(TextView) findViewById(R.id.textViewHasil4);
+
 
         bOrder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +57,30 @@ public class MainActivity extends AppCompatActivity {
 
     private void doClick()
     {
+      String hasil = null;
 
+        if(rbJNE.isChecked())
+        {
+            hasil = rbJNE.getText().toString();
+
+        }
+        else if(rbTIKI.isChecked())
+        {
+            hasil = (rbTIKI.getText().toString());
+        }
+        if (hasil == null)
+        {
+            tvHasil3.setText("Belum memilih Jasa pengantar");
+        }
+
+         else
+        {
+            tvHasil3.setText("dengan Jasa pengantar " +hasil);
+        }
+        String check = "Orderan Anda :";
+        int startlen = check.length();
+        if(cb1.isChecked()) check += cb1.getText() + " ";
+        if(cb1.isChecked()) check += cb1.getText() + " ";
     }
 
     private void doProcess() {
