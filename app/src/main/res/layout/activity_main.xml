@@ -123,7 +123,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/Domisili"
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerDomisili"
         android:clickable="false" />
 
     <Button

@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox cb1, cb2, cb3, cb4;
     RadioGroup rgJS;
     Button bOrder;
+    Spinner spDomisili;
     TextView tvHasil1 , tvHasil2 , tvHasil3 , tvHasil4;
 
 
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         cb3 = (CheckBox) findViewById(R.id.checkBox3);
         cb4 = (CheckBox) findViewById(R.id.checkBox4);
         bOrder = (Button) findViewById(R.id.buttonOrder);
+        spDomisili = (Spinner) findViewById(R.id.spinnerDomisili);
         tvHasil1 = (TextView) findViewById(R.id.textViewHasil1);
         tvHasil2 = (TextView) findViewById(R.id.textViewHasil2);
         tvHasil3= (TextView) findViewById(R.id.textViewHasil3);
@@ -75,12 +77,17 @@ public class MainActivity extends AppCompatActivity {
 
          else
         {
-            tvHasil3.setText("dengan Jasa pengantar " +hasil);
+            tvHasil3.setText("dengan Jasa pengantar : " +hasil);
         }
-        String check = "Orderan Anda :";
+        String check = "Orderan Anda :  ";
         int startlen = check.length();
         if(cb1.isChecked()) check += cb1.getText() + " ";
-        if(cb1.isChecked()) check += cb1.getText() + " ";
+        if(cb2.isChecked()) check += cb2.getText() + " ";
+        if(cb3.isChecked()) check += cb3.getText() + " ";
+        if(cb4.isChecked()) check += cb4.getText() + " ";
+
+        if(check.length() == startlen) hasil += "Tidak ada pilihan";
+        tvHasil3.setText("dengan Jasa pengantar : " +hasil+"."+ check + "." + spDomisili.getSelectedItem().toString()+".");
     }
 
     private void doProcess() {
