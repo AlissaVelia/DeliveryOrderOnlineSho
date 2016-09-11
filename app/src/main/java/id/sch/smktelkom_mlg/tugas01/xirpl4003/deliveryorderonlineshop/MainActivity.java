@@ -40,10 +40,9 @@ public class MainActivity extends AppCompatActivity {
         cb4 = (CheckBox) findViewById(R.id.checkBox4);
         bOrder = (Button) findViewById(R.id.buttonOrder);
         spDomisili = (Spinner) findViewById(R.id.spinnerDomisili);
-        tvHasil1 = (TextView) findViewById(R.id.textViewHasil1);
         tvHasil2 = (TextView) findViewById(R.id.textViewHasil2);
         tvHasil3= (TextView) findViewById(R.id.textViewHasil3);
-        tvHasil4=(TextView) findViewById(R.id.textViewHasil4);
+
 
 
         bOrder.setOnClickListener(new View.OnClickListener() {
@@ -87,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         if(cb4.isChecked()) check += cb4.getText() + " ";
 
         if(check.length() == startlen) hasil += "Tidak ada pilihan";
-        tvHasil3.setText("dengan Jasa pengantar  " +hasil+"."+ check + "." + spDomisili.getSelectedItem().toString()+".");
+        tvHasil3.setText("Menggunakan Jasa pengantar  " +hasil+"."+ check + "." + spDomisili.getSelectedItem().toString()+".");
     }
 
     private void doProcess()
