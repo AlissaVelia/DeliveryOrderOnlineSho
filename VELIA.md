@@ -7,5 +7,7 @@ barang yang telah di pesan dan pemberitahuan lebih lanjut, Domisili tempat pembe
 hal ini digunakan untuk validasi antara penjual dan pembeli. Untuk deteksi kesalahan saya tambahkan peringatan (Nama haruslebih dari 3 
 karakter dan nomor telpon harus diisi) ketika user/calon pembeli akan melakukan pemesanan
 
+https://drive.google.com/file/d/0B5c-v0fA4oVKbUMyS0kyWUVjWUE/view?usp=sharing
+
 ![on](https://cloud.githubusercontent.com/assets/22128652/18416708/d71e934e-7845-11e6-8fa7-d946f8b8bda1.PNG) 
 ![line](https://cloud.githubusercontent.com/assets/22128652/18416740/a4670e44-7846-11e6-832b-5cecb236474d.PNG)
